@@ -20,8 +20,8 @@ public interface NotificationMapper {
     Notification toEntity(NotificationRequest request);
 
     @Mapping(target = "message", ignore = true)
-    @Mapping(target = "subject", source = "subject")
-    @Mapping(target = "email", source = "email")
-    @Mapping(target = "phone", source = "phone")
+    @Mapping(target = "subject", source = "notificationSubject")
+    @Mapping(target = "email", source = "clientEmail")
+    @Mapping(target = "phone", source = "clientPhone")
     NotificationMessageRequest toMessageRequest(NotificationRequest request);
 }

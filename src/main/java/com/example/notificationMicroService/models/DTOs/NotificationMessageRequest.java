@@ -1,14 +1,11 @@
 package com.example.notificationMicroService.models.DTOs;
 
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.RequiredArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 @Getter
 @Setter
 @NoArgsConstructor
-@RequiredArgsConstructor
+@AllArgsConstructor
 public class NotificationMessageRequest {
     private String message;
     private String subject;

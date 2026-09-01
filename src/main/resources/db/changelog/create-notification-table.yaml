@@ -1,0 +1,43 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-notification
+      author: alwaysintilte
+      changes:
+        - createTable:
+              tableName: notifications
+              columns:
+                - column:
+                    name: id
+                    type: bigint
+                    constraints:
+                      primaryKey: true
+                      nullable: false
+                - column:
+                    name: clientId
+                    type: bigint
+                - column:
+                    name: barberId
+                    type: bigint
+                - column:
+                    name: notification_channel
+                    type: text
+                    constraints:
+                      nullable: false
+                - column:
+                    name: status
+                    type: text
+                    constraints:
+                      nullable: false
+                - column:
+                    name: notification_text
+                    type: text
+                    constraints:
+                      nullable: false
+                - column:
+                    name: appointment_date
+                    type: timestamp
+                - column:
+                    name: created_at
+                    type: timestamp
+                    constraints:
+                      nullable: false
